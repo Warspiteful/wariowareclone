@@ -47,9 +47,11 @@ margin_top = 14.0
 margin_right = 95.0
 margin_bottom = 135.0
 script = SubResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="G7" type="TextureButton" parent="UI"]
-editor/display_folded = true
 margin_left = -42.0
 margin_top = 2.0
 margin_right = -18.0
@@ -62,7 +64,8 @@ focus_neighbour_bottom = NodePath("../G4")
 mouse_filter = 2
 script = ExtResource( 2 )
 __meta__ = {
-"_edit_group_": true
+"_edit_group_": true,
+"_edit_use_anchors_": false
 }
 unlock_check_keys = PoolStringArray( "Batch9" )
 
@@ -73,7 +76,6 @@ hframes = 8
 frame = 7
 
 [node name="G6" type="TextureButton" parent="UI"]
-editor/display_folded = true
 margin_left = -90.0
 margin_top = -14.0
 margin_right = -66.0
@@ -93,7 +95,6 @@ hframes = 8
 frame = 6
 
 [node name="G5" type="TextureButton" parent="UI"]
-editor/display_folded = true
 margin_left = -58.0
 margin_top = -22.0
 margin_right = -34.0
@@ -115,7 +116,6 @@ hframes = 8
 frame = 5
 
 [node name="G4" type="TextureButton" parent="UI"]
-editor/display_folded = true
 margin_left = -50.0
 margin_top = 42.0
 margin_right = -26.0
@@ -139,7 +139,6 @@ hframes = 8
 frame = 3
 
 [node name="G3" type="TextureButton" parent="UI"]
-editor/display_folded = true
 margin_left = -74.0
 margin_top = 58.0
 margin_right = -50.0
@@ -163,7 +162,6 @@ hframes = 8
 frame = 4
 
 [node name="G2" type="TextureButton" parent="UI"]
-editor/display_folded = true
 margin_left = -74.0
 margin_top = 10.0
 margin_right = -50.0
@@ -183,7 +181,6 @@ hframes = 8
 frame = 2
 
 [node name="G1" type="TextureButton" parent="UI"]
-editor/display_folded = true
 margin_left = 30.0
 margin_top = 42.0
 margin_right = 54.0
@@ -192,7 +189,8 @@ rect_min_size = Vector2( 24, 27 )
 mouse_filter = 2
 script = ExtResource( 2 )
 __meta__ = {
-"_edit_group_": true
+"_edit_group_": true,
+"_edit_use_anchors_": false
 }
 scene_path = "res://Scenes/Batch1.tscn"
 score_check_key = "Batch1"
@@ -225,21 +223,13 @@ margin_right = 49.5
 margin_bottom = 37.0
 border_color = Color( 1, 0, 0, 0 )
 script = ExtResource( 6 )
-ignore_rect = false
 char_spacing = 1
 centered = true
-space_width = 4
 text = "0"
 character_set = "0123456789"
-custom_char_spaces = PoolIntArray(  )
-visible_characters = -1
 font_texture = ExtResource( 7 )
 char_width = 3
 char_height = 5
-anim_speed = 60.0
-anim_interval = 0.0
-tab_spaces = 2
-texture_rows = 10
 
 [node name="2nd" type="ReferenceRect" parent="top3"]
 margin_left = 9.5
@@ -248,21 +238,13 @@ margin_right = 49.5
 margin_bottom = 47.5
 border_color = Color( 1, 0, 0, 0 )
 script = ExtResource( 6 )
-ignore_rect = false
 char_spacing = 1
 centered = true
-space_width = 4
 text = "0"
 character_set = "0123456789"
-custom_char_spaces = PoolIntArray(  )
-visible_characters = -1
 font_texture = ExtResource( 7 )
 char_width = 3
 char_height = 5
-anim_speed = 60.0
-anim_interval = 0.0
-tab_spaces = 2
-texture_rows = 10
 
 [node name="3rd" type="ReferenceRect" parent="top3"]
 margin_left = 9.5
@@ -271,18 +253,10 @@ margin_right = 49.5
 margin_bottom = 58.5
 border_color = Color( 1, 0, 0, 0 )
 script = ExtResource( 6 )
-ignore_rect = false
 char_spacing = 1
 centered = true
-space_width = 4
 text = "0"
 character_set = "0123456789"
-custom_char_spaces = PoolIntArray(  )
-visible_characters = -1
 font_texture = ExtResource( 7 )
 char_width = 3
 char_height = 5
-anim_speed = 60.0
-anim_interval = 0.0
-tab_spaces = 2
-texture_rows = 10

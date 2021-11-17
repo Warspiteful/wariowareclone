@@ -1,11 +1,11 @@
 [gd_scene load_steps=35 format=2]
 
-[ext_resource path="res://Scenes/MicroGames/Batch1/mgSumoFight.gd" type="Script" id=1]
+[ext_resource path="res://Scenes/MicroGames/Old MicroGames/mgSumoFight.gd" type="Script" id=1]
 [ext_resource path="res://GFX/SumoFight/sumo-bg.png" type="Texture" id=2]
-[ext_resource path="res://GFX/SumoFight/Bicashu.png" type="Texture" id=3]
-[ext_resource path="res://GFX/SumoFight/sumo.png" type="Texture" id=4]
-[ext_resource path="res://GFX/SumoFight/maurio.png" type="Texture" id=5]
-[ext_resource path="res://GFX/SumoFight/dunkey-kung.png" type="Texture" id=6]
+[ext_resource path="res://GFX/SumoFight/sumo.png" type="Texture" id=3]
+[ext_resource path="res://GFX/SumoFight/maurio.png" type="Texture" id=4]
+[ext_resource path="res://GFX/SumoFight/dunkey-kung.png" type="Texture" id=5]
+[ext_resource path="res://GFX/SumoFight/Bicashu.png" type="Texture" id=6]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 8, 8 )
@@ -643,7 +643,6 @@ __meta__ = {
 }
 
 [node name="Solids" type="Node2D" parent="."]
-editor/display_folded = true
 
 [node name="StaticBody2D" type="StaticBody2D" parent="Solids"]
 position = Vector2( -8, 0 )
@@ -688,7 +687,6 @@ __meta__ = {
 shape = SubResource( 1 )
 
 [node name="Battlefield" type="Area2D" parent="."]
-editor/display_folded = true
 position = Vector2( 32, 48 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Battlefield"]
@@ -703,8 +701,7 @@ collision_layer = 5
 collision_mask = 5
 
 [node name="Sprite" type="Sprite" parent="Anime"]
-editor/display_folded = true
-texture = ExtResource( 3 )
+texture = ExtResource( 6 )
 offset = Vector2( 0, -3 )
 flip_h = true
 hframes = 7
@@ -729,7 +726,7 @@ collision_layer = 3
 collision_mask = 3
 
 [node name="Sprite" type="Sprite" parent="Player"]
-texture = ExtResource( 4 )
+texture = ExtResource( 3 )
 offset = Vector2( 0, -3 )
 hframes = 27
 frame = 2
@@ -767,7 +764,7 @@ __meta__ = {
 }
 
 [node name="Sprite" type="Sprite" parent="Maurio"]
-texture = ExtResource( 5 )
+texture = ExtResource( 4 )
 offset = Vector2( -4, -12 )
 flip_h = true
 hframes = 9
@@ -794,7 +791,7 @@ __meta__ = {
 }
 
 [node name="Sprite" type="Sprite" parent="DunkeyKung"]
-texture = ExtResource( 6 )
+texture = ExtResource( 5 )
 flip_h = true
 hframes = 21
 frame = 16
@@ -808,4 +805,3 @@ anims/victory = SubResource( 27 )
 anims/walk = SubResource( 28 )
 
 [node name="Bicashu" type="Node2D" parent="."]
-

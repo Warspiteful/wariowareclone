@@ -1,11 +1,12 @@
 [gd_scene load_steps=25 format=2]
 
-[ext_resource path="res://Scenes/MicroGames/Batch1/mgFindTheVampire.gd" type="Script" id=1]
+[ext_resource path="res://Scenes/MicroGames/Old MicroGames/mgFindTheVampire.gd" type="Script" id=1]
 [ext_resource path="res://GFX/FindTheVampire/find-the-vampire-bg.png" type="Texture" id=2]
 [ext_resource path="res://GFX/FindTheVampire/Vampire.png" type="Texture" id=3]
 [ext_resource path="res://GFX/FindTheVampire/joseph-joestar.png" type="Texture" id=4]
 [ext_resource path="res://GFX/FindTheVampire/sonic-explosion.png" type="Texture" id=5]
 [ext_resource path="res://GFX/FindTheVampire/arrow.png" type="Texture" id=6]
+
 
 [sub_resource type="Animation" id=1]
 resource_name = "wavev"

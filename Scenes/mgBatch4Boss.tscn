@@ -46,4 +46,3 @@ __meta__ = {
 position = Vector2( -32, 0 )
 z_as_relative = false
 texture = ExtResource( 3 )
-
