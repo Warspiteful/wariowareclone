@@ -198,7 +198,7 @@ func prepare_next():
 		#add boss here
 	var next;
 	if !boss_time:
-	 	next = microgame_list.pop_back();
+		next = microgame_list.pop_back();
 	else:
 		next = boss
 	if next != null:
