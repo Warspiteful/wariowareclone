@@ -172,6 +172,9 @@ margin_right = 2048.0
 margin_bottom = 61.0
 texture = ExtResource( 2 )
 stretch_mode = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="tongue" type="Sprite" parent="."]
 position = Vector2( 80, 92 )

@@ -8,26 +8,10 @@
 
 config_version=4
 
-_global_script_classes=[ {
-"base": "Node2D",
-"class": "Micro_Game",
-"language": "GDScript",
-"path": "res://Scripts/MicroGame.gd"
-}, {
-"base": "ReferenceRect",
-"class": "SpriteText",
-"language": "GDScript",
-"path": "res://SpriteTextScript/SpriteText.gd"
-} ]
-_global_script_class_icons={
-"Micro_Game": "",
-"SpriteText": ""
-}
-
 [application]
 
 config/name="GBWare"
-run/main_scene="res://Main.tscn"
+run/main_scene="res://scenes/title_test.tscn"
 boot_splash/image="res://splash.png"
 boot_splash/bg_color=Color( 0, 0, 0, 0.505882 )
 config/icon="res://icon.png"
