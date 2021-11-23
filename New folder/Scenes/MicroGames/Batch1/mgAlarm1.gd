@@ -17,7 +17,7 @@ func _process(_delta):
 		if(position.x > 130):
 			directionRight = true	
 	else:
-		position = position.move_toward(Vector2(position.x,100), _delta * speed)
+		position = position.move_toward(Vector2(position.x,100), _delta * speed*5)
 		
 func moveDown():
 	hitting = true

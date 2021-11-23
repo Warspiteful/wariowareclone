@@ -7,7 +7,7 @@
 [ext_resource path="res://GFX/LickingGuy/tongue.png" type="Texture" id=5]
 [ext_resource path="res://GFX/LickingGuy/bg.png" type="Texture" id=6]
 
-[sub_resource type="GDScript" id=1]
+[sub_resource type="GDScript" id=6]
 script/source = "extends Sprite
 
 # Declare member variables here. Examples:
@@ -30,10 +30,10 @@ func _process(delta):
 	pass
 "
 
-[sub_resource type="RectangleShape2D" id=2]
+[sub_resource type="RectangleShape2D" id=7]
 extents = Vector2( 24, 16 )
 
-[sub_resource type="Animation" id=3]
+[sub_resource type="Animation" id=8]
 resource_name = "Lick"
 length = 0.45
 step = 0.05
@@ -86,7 +86,7 @@ tracks/3/keys = {
 "values": [ Vector2( 80, 56.5 ), Vector2( 80, 99 ), Vector2( 80, 91 ), Vector2( 80, 83 ), Vector2( 80, 75 ), Vector2( 80, 67 ) ]
 }
 
-[sub_resource type="Animation" id=4]
+[sub_resource type="Animation" id=9]
 resource_name = "d"
 tracks/0/type = "value"
 tracks/0/path = NodePath("LickPoint:position")
@@ -187,8 +187,8 @@ hframes = 5
 position = Vector2( 80, 96 )
 texture = ExtResource( 4 )
 hframes = 7
-frame = 5
-script = SubResource( 1 )
+frame = 4
+script = SubResource( 6 )
 __meta__ = {
 "_edit_group_": true
 }
@@ -196,14 +196,14 @@ __meta__ = {
 [node name="Area2D" type="Area2D" parent="Food/FoodBase"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Food/FoodBase/Area2D"]
-shape = SubResource( 2 )
+shape = SubResource( 7 )
 
 [node name="LickAnim" type="AnimationPlayer" parent="." groups=[
 "mg_anim",
 ]]
 autoplay = "d"
-anims/Lick = SubResource( 3 )
-anims/d = SubResource( 4 )
+anims/Lick = SubResource( 8 )
+anims/d = SubResource( 9 )
 
 [node name="LickPoint" type="Position2D" parent="."]
 position = Vector2( 80, 67 )

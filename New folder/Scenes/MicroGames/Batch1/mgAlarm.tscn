@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://Scenes/MicroGames/Batch1/mgAlarm.gd" type="Script" id=1]
 [ext_resource path="res://GFX/LickingGuy/licking-guy.png" type="Texture" id=2]
@@ -6,9 +6,14 @@
 [ext_resource path="res://GFX/LickingGuy/table.png" type="Texture" id=4]
 [ext_resource path="res://icon.png" type="Texture" id=5]
 [ext_resource path="res://Scenes/MicroGames/Batch1/mgAlarm1.gd" type="Script" id=6]
+[ext_resource path="res://GFX/LickingGuy/tongue.png" type="Texture" id=7]
+[ext_resource path="res://Scenes/MicroGames/Batch1/Object.gd" type="Script" id=8]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 5, 10 )
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 35.563, 34.8535 )
 
 [sub_resource type="Animation" id=2]
 resource_name = "Hit"
@@ -45,6 +50,22 @@ hframes = 10
 frame = 1
 script = ExtResource( 6 )
 
+[node name="HitPoint" type="Position2D" parent="Hand"]
+position = Vector2( 4.7674, 53.6224 )
+scale = Vector2( 1.67664, 1.45981 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Area2D" type="Area2D" parent="Hand/HitPoint"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hand/HitPoint/Area2D"]
+shape = SubResource( 1 )
+
+[node name="Sprite" type="Sprite" parent="Hand/HitPoint"]
+visible = false
+texture = ExtResource( 7 )
+
 [node name="Table" type="Node2D" parent="."]
 position = Vector2( -12, 70 )
 
@@ -58,21 +79,40 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="HitPoint" type="Position2D" parent="."]
-position = Vector2( 80, 67 )
-__meta__ = {
-"_edit_group_": true
-}
-
-[node name="Area2D" type="Area2D" parent="HitPoint"]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="HitPoint/Area2D"]
-shape = SubResource( 1 )
-
-[node name="Sprite" type="Sprite" parent="."]
+[node name="Object" type="Sprite" parent="."]
 position = Vector2( 126.354, 92.3436 )
 scale = Vector2( 0.553039, 0.553039 )
 texture = ExtResource( 5 )
+hframes = 4
+frame = 1
+script = ExtResource( 8 )
+
+[node name="Area2D" type="Area2D" parent="Object"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Object/Area2D"]
+shape = SubResource( 3 )
+
+[node name="Object1" type="Sprite" parent="."]
+position = Vector2( 80.469, 93.6784 )
+scale = Vector2( 0.553039, 0.553039 )
+texture = ExtResource( 5 )
+hframes = 4
+
+[node name="Area2D" type="Area2D" parent="Object1"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Object1/Area2D"]
+shape = SubResource( 3 )
+
+[node name="Object2" type="Sprite" parent="."]
+position = Vector2( 28.5771, 93.1778 )
+scale = Vector2( 0.553039, 0.553039 )
+texture = ExtResource( 5 )
+hframes = 4
+
+[node name="Area2D" type="Area2D" parent="Object2"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Object2/Area2D"]
+shape = SubResource( 3 )
 
 [node name="Tween" type="Tween" parent="."]
 

@@ -2,8 +2,8 @@ extends Micro_Game
 
 onready var table = $Table
 onready var anim = $HitAnim
-onready var hit_point = $HitPoint
-onready var hit_area = $LickPoint/Area2D
+onready var hit_point = $Hand/HitPoint
+onready var hit_area = $Hand/HitPoint/Area2D
 onready var sfx_hit = AudioManager.get_sound_id("yoshi-tongue.wav")
 onready var hand = $Hand
 
@@ -13,6 +13,9 @@ onready var tween = $Tween
 var hitting = false
 var game_over = false
 var alarm = null
+
+func get_hint_string():
+	return "Hit the Alarm!"
 func _init():
 	time = 10
 		
@@ -22,16 +25,8 @@ func _ready():
 	#tween.interpolate_callback(force_microgame_end())
 	pass
 
-func _on_anim_finished(a):
-	anim.play("d")
-	if a == "Hit":
-		hitting = false
-		if alarm != null:
-			force_microgame_end()
-			alarm.queue_free()
-			alarm = null
-	
-	
+
+
 func _process(delta):
 	if !game_over:
 		if !hitting:
@@ -39,12 +34,15 @@ func _process(delta):
 				hand.moveDown()
 				hitting = true
 				AudioManager.play_sfx(sfx_hit)
-	else:
-		var areas = hit_area.get_overlapping_areas()
-		for a in areas:
-			alarm = a.get_parent()
-			if alarm.frame == alarm:
-				game_cleared()
-			break
-		if alarm != null:
-			alarm.global_position = hit_point.global_position
+		else:
+			var areas = hit_area.get_overlapping_areas()
+			for a in areas:
+				alarm = a.get_parent()
+				if alarm.frame == 1:
+
+					game_cleared()
+					break
+			force_microgame_end()
+
+			if alarm != null:
+				alarm.global_position = hit_point.global_position
