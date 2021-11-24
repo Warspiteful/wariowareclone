@@ -12,11 +12,10 @@
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 5, 10 )
 
-[sub_resource type="RectangleShape2D" id=3]
+[sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 35.563, 34.8535 )
 
-[sub_resource type="Animation" id=2]
-resource_name = "Hit"
+[sub_resource type="Animation" id=3]
 tracks/0/type = "value"
 tracks/0/path = NodePath("Hand:position")
 tracks/0/interp = 1
@@ -90,7 +89,7 @@ script = ExtResource( 8 )
 [node name="Area2D" type="Area2D" parent="Object"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Object/Area2D"]
-shape = SubResource( 3 )
+shape = SubResource( 2 )
 
 [node name="Object1" type="Sprite" parent="."]
 position = Vector2( 80.469, 93.6784 )
@@ -101,7 +100,7 @@ hframes = 4
 [node name="Area2D" type="Area2D" parent="Object1"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Object1/Area2D"]
-shape = SubResource( 3 )
+shape = SubResource( 2 )
 
 [node name="Object2" type="Sprite" parent="."]
 position = Vector2( 28.5771, 93.1778 )
@@ -112,9 +111,9 @@ hframes = 4
 [node name="Area2D" type="Area2D" parent="Object2"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Object2/Area2D"]
-shape = SubResource( 3 )
+shape = SubResource( 2 )
 
 [node name="Tween" type="Tween" parent="."]
 
 [node name="HitAnim" type="AnimationPlayer" parent="."]
-anims/Hit = SubResource( 2 )
+anims/Hit = SubResource( 3 )
