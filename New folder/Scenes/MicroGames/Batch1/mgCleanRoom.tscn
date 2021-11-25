@@ -3,7 +3,7 @@
 [ext_resource path="res://Scenes/MicroGames/Batch1/mgCleanRoom.gd" type="Script" id=1]
 [ext_resource path="res://GFX/LickingGuy/bg.png" type="Texture" id=2]
 [ext_resource path="res://Scenes/MicroGames/Batch1/mgCleanRoomdrop_zone.tscn" type="PackedScene" id=3]
-[ext_resource path="res://prefab/draggableObject.tscn" type="PackedScene" id=4]
+[ext_resource path="res://prefab/mgCleanRoomdraggableObject.tscn" type="PackedScene" id=4]
 
 [node name="mgCleanRoom" type="Node2D"]
 scale = Vector2( 2, 2 )
