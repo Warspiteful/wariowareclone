@@ -12,15 +12,16 @@ var rest_nodes = []
 var rest_point
 func _ready():
 	rest_nodes = get_tree().get_nodes_in_group("zone")
-	rest_point = null
+	rest_point = rest_nodes[1].global_position
+	rest_nodes[1].select()
 
 	
 func _physics_process(delta):
 	clamp(global_position.y, 0,0);
 	if selected:
-
 		global_position = lerp(global_position,Vector2(get_global_mouse_position().x,global_position.y), 25 * delta)
-
+	else:
+		global_position = lerp(global_position,rest_point, 30 * delta)
 
 
 
@@ -40,6 +41,7 @@ func _input(event):
 					child.select()
 					rest_point = child.global_position
 					shortest_dist = distance
-					AudioManager.play_sfx_name("correct.wav")
-					queue_free()
+					if(rest_point != rest_nodes[1].global_position):
+						AudioManager.play_sfx_name("correct.wav")
+						queue_free()
 		

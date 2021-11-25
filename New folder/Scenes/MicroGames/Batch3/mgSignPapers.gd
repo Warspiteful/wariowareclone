@@ -6,11 +6,10 @@ extends Micro_Game
 # var b = "text"
 
 
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	pass # Replace with function body.
+func _process(delta):
+	if($ProgressBar.value >= 100):
+		game_cleared()
 
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
+func _on_Area2D_input_event(viewport, event, shape_idx):
+	if Input.is_action_just_pressed("click"):
+		$ProgressBar.value += 5

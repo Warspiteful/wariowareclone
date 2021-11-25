@@ -26,5 +26,9 @@ position = Vector2( 133.183, 99.0256 )
 scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 4 )
 
+[node name="drop_zone2" parent="SwiperArea" instance=ExtResource( 5 )]
+scale = Vector2( 2, 2 )
+
 [node name="drop_zone" parent="SwiperArea" instance=ExtResource( 5 )]
+position = Vector2( -225, 0 )
 scale = Vector2( 2, 2 )
