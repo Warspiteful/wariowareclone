@@ -14,9 +14,8 @@ var hitting = false
 var game_over = false
 var alarm = null
 
-func get_hint_string():
-	return "Hit the Alarm!"
 func _init():
+	hint_string = "Hit the Alarm!"
 	time = 10
 		
 func _ready():

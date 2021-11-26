@@ -646,7 +646,6 @@ __meta__ = {
 }
 
 [node name="Easy" type="TileMap" parent="."]
-editor/display_folded = true
 visible = false
 tile_set = ExtResource( 3 )
 cell_size = Vector2( 16, 16 )
@@ -655,7 +654,6 @@ format = 1
 tile_data = PoolIntArray( 458752, 12, 0, 458753, 13, 0, 458754, 14, 0, 458757, 18, 0, 458760, 18, 0, 524288, 15, 0, 524289, 16, 0, 524290, 17, 0, 589824, 15, 0, 589825, 16, 0, 589826, 17, 0 )
 
 [node name="KinematicBody2D" type="StaticBody2D" parent="Easy"]
-editor/display_folded = true
 position = Vector2( 0, 112 )
 scale = Vector2( 3, 6 )
 __meta__ = {
@@ -667,7 +665,6 @@ position = Vector2( 8, 8 )
 shape = SubResource( 1 )
 
 [node name="KinematicBody2D2" type="StaticBody2D" parent="Easy"]
-editor/display_folded = true
 position = Vector2( 80, 112 )
 scale = Vector2( 2, 6 )
 __meta__ = {
@@ -679,7 +676,6 @@ position = Vector2( 8, 8 )
 shape = SubResource( 1 )
 
 [node name="KinematicBody2D3" type="StaticBody2D" parent="Easy"]
-editor/display_folded = true
 position = Vector2( 128, 112 )
 scale = Vector2( 2, 6 )
 __meta__ = {
@@ -691,7 +687,6 @@ position = Vector2( 8, 8 )
 shape = SubResource( 1 )
 
 [node name="Medium" type="TileMap" parent="."]
-editor/display_folded = true
 visible = false
 tile_set = ExtResource( 3 )
 cell_size = Vector2( 16, 16 )
@@ -700,7 +695,6 @@ format = 1
 tile_data = PoolIntArray( 47, 0, 0, 393221, 43, 0, 393223, 43, 0, 393225, 43, 0, 458752, 12, 0, 458753, 13, 0, 458754, 14, 0, 458757, 45, 0, 458759, 45, 0, 458761, 45, 0, 524288, 15, 0, 524289, 16, 0, 524290, 17, 0, 589824, 15, 0, 589825, 16, 0, 589826, 17, 0 )
 
 [node name="KinematicBody2D4" type="StaticBody2D" parent="Medium"]
-editor/display_folded = true
 position = Vector2( 0, 112 )
 scale = Vector2( 3, 6 )
 __meta__ = {
@@ -712,7 +706,6 @@ position = Vector2( 8, 8 )
 shape = SubResource( 1 )
 
 [node name="KinematicBody2D5" type="StaticBody2D" parent="Medium"]
-editor/display_folded = true
 position = Vector2( 80, 112 )
 scale = Vector2( 1, 6 )
 __meta__ = {
@@ -724,7 +717,6 @@ position = Vector2( 8, 8 )
 shape = SubResource( 1 )
 
 [node name="KinematicBody2D6" type="StaticBody2D" parent="Medium"]
-editor/display_folded = true
 position = Vector2( 112, 112 )
 scale = Vector2( 1, 6 )
 __meta__ = {
@@ -736,7 +728,6 @@ position = Vector2( 8, 8 )
 shape = SubResource( 1 )
 
 [node name="KinematicBody2D7" type="StaticBody2D" parent="Medium"]
-editor/display_folded = true
 position = Vector2( 144, 112 )
 scale = Vector2( 1, 6 )
 __meta__ = {
@@ -755,7 +746,6 @@ format = 1
 tile_data = PoolIntArray( 47, 0, 0, 393221, 43, 0, 393222, 43, 0, 393223, 43, 0, 458752, 12, 0, 458753, 13, 0, 458754, 14, 0, 458757, 45, 0, 458758, 45, 0, 458759, 45, 0, 524288, 15, 0, 524289, 16, 0, 524290, 17, 0, 589824, 15, 0, 589825, 16, 0, 589826, 17, 0 )
 
 [node name="KinematicBody2D8" type="StaticBody2D" parent="Hard"]
-editor/display_folded = true
 position = Vector2( 0, 112 )
 scale = Vector2( 3, 6 )
 __meta__ = {
@@ -767,7 +757,6 @@ position = Vector2( 8, 8 )
 shape = SubResource( 1 )
 
 [node name="KinematicBody2D9" type="StaticBody2D" parent="Hard"]
-editor/display_folded = true
 position = Vector2( 80, 112 )
 scale = Vector2( 3, 6 )
 __meta__ = {
@@ -827,7 +816,6 @@ anims/kids_died = SubResource( 5 )
 anims/win = SubResource( 6 )
 
 [node name="ScreenArea" type="Area2D" parent="."]
-editor/display_folded = true
 visible = false
 input_pickable = false
 __meta__ = {
@@ -848,7 +836,6 @@ anims/m = SubResource( 10 )
 [node name="ToadKid1" type="KinematicBody2D" parent="Kids" groups=[
 "kid",
 ]]
-editor/display_folded = true
 position = Vector2( 262.764, 141.774 )
 scale = Vector2( 2, 2 )
 collision_layer = 2
@@ -889,7 +876,6 @@ anims/pop = SubResource( 16 )
 [node name="ToadKid2" type="KinematicBody2D" parent="Kids" groups=[
 "kid",
 ]]
-editor/display_folded = true
 position = Vector2( 182.269, 65.2365 )
 scale = Vector2( 2, 2 )
 collision_layer = 2
@@ -930,7 +916,6 @@ anims/pop = SubResource( 20 )
 [node name="ToadKid3" type="KinematicBody2D" parent="Kids" groups=[
 "kid",
 ]]
-editor/display_folded = true
 position = Vector2( 155.215, 192 )
 scale = Vector2( 2, 2 )
 collision_layer = 2
@@ -967,4 +952,3 @@ anims/d = SubResource( 21 )
 anims/falling = SubResource( 22 )
 anims/landed = SubResource( 23 )
 anims/pop = SubResource( 24 )
-

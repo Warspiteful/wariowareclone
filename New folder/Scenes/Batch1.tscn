@@ -22,7 +22,7 @@ tracks/0/keys = {
 }
 
 [node name="Batch1" instance=ExtResource( 1 )]
-possible_microgames = PoolStringArray( "MKMicroGame", "DDDBreaksBarrels", "FindTheVampire", "FollowTheRhythm", "WhiteDudeJumping", "BreakTheTargets", "WhiteDudeClimbing", "LickingGuy", "SumoFight", "FlappyMario", "Batch3Boss" )
+possible_microgames = PoolStringArray( "Alarm", "CleanRoom", "VideoGames" )
 has_boss = true
 boss = ExtResource( 2 )
 always_endless = true
