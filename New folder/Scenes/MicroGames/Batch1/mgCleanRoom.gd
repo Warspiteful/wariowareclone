@@ -9,7 +9,6 @@ func _init():
 	
 func _process(delta):
 	if(get_tree().get_nodes_in_group("trash") == []):
-		
 		game_cleared()
 		force_microgame_end()
 
