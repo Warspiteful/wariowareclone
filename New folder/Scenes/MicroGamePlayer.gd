@@ -104,7 +104,7 @@ func _ready():
 func _process(delta):
 	if intro:
 		intro = false
-		AudioManager.play_sfx(sfx_intro)
+		AudioManager.play_custom("childmusic.ogg")
 	if in_game:
 		if enable_win_key && Input.is_action_just_pressed("win"):
 			end_micro_game = true;
@@ -324,12 +324,7 @@ func success_sfx():
 	AudioManager.stop_all();
 	AudioManager.stop_music();
 	var sfx_id = 0;
-	var rng = randi() %2;
-	if rng == 0:
-		sfx_id = sfx_success1;
-	else:
-		sfx_id = sfx_success2;
-	AudioManager.play_sfx(sfx_id,game_speed);
+	AudioManager.play_custom("victory-music.ogg",game_speed);
 	
 func game_over():
 	pass

@@ -4,7 +4,7 @@ const max_channels = 12 #up to 8 sounds playing at a time
 const preload_all = true;
 const sfx_path = "res://SFX/";
 const mus_path = "res://Music/"
-
+const new_mus_path = "res://Music/ActualMusic/"
 #sound effects
 var sfx_players = []
 var available = []
@@ -98,7 +98,17 @@ func play_music(music_name,speed = -1):
 	music_player.pitch_scale = speed;
 	music_player.play();
 	
-
+func play_custom(music_name,speed = -1):
+	if !enabled:
+		return
+	if speed < 0:
+		if Global.game_player == null:
+			speed = 1
+		else:
+			speed = Global.game_player.game_speed;
+	music_player.stream = load(new_mus_path+music_name);
+	music_player.pitch_scale = speed;
+	music_player.play();
 
 func stop_music():
 	if music_player.playing:
