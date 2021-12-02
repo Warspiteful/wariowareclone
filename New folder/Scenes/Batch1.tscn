@@ -22,10 +22,11 @@ tracks/0/keys = {
 }
 
 [node name="Batch1" instance=ExtResource( 1 )]
-possible_microgames = PoolStringArray( "Alarm", "CleanRoom", "VideoGames" )
+possible_microgames = [ PoolStringArray( "CleanRoom" ), PoolStringArray( "VideoGames" ), PoolStringArray(  ), PoolStringArray(  ) ]
 has_boss = true
 boss = ExtResource( 2 )
 always_endless = true
+games_until_boss = 2
 
 [node name="Timer" parent="HUD" index="0"]
 visible = true

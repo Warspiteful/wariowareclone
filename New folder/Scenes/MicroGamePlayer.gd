@@ -3,7 +3,7 @@ extends Node2D
 #Must be set before instantiating the scene
 #it contains the available microgames as a PackedScene array
 var possible_microgames_list = [];
-export(PoolStringArray) var possible_microgames = PoolStringArray();
+export(Array, PoolStringArray) var possible_microgames;
 
 export var no_save:bool = false;
 export var has_boss:bool = false;
@@ -72,14 +72,14 @@ var high_scores = [0,0,0];
 var enable_win_key = true
 var intro = true
 
+export var lifeIndex = 0;
+
 onready var sfx_clock = AudioManager.get_sound_id("timer.wav")
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	
-	if possible_microgames.size()>0:
-		for s in possible_microgames:
-			possible_microgames_list.append(Global.microgame_list[Global.microgame_ids[s]]);
+	initializeGames()
 		
 	var sprs = live_node_parent.get_children();
 	for spr in sprs:
@@ -146,7 +146,13 @@ func set_game_speed(val):
 	game_speed = val;
 	hint.anim_speed = float(200*game_speed);
 	
-
+func initializeGames():
+	print("NEW GAMES")
+	microgame_list = [];
+	print(possible_microgames_list)
+	if possible_microgames[lifeIndex].size()>0:
+		for s in possible_microgames[lifeIndex]:
+			microgame_list.append(Global.microgame_list[Global.microgame_ids[s]]);
 
 func prepare_next():
 	get_viewport().global_canvas_transform = Transform2D()
@@ -264,6 +270,8 @@ func on_win_anim_end():
 		anim.play("win");
 		AudioManager.play_sfx(sfx_game_over)
 		print(name+" boss cleared for the first time")
+	
+			
 		
 		return
 	if boss_time:
@@ -280,6 +288,9 @@ func on_win_anim_end():
 			#boss_game_counter -= 1;
 			#speedup_counter -= 1;
 		boss_time = false;
+		if(lifeIndex < 3):
+			lifeIndex += 1
+			initializeGames()
 
 func on_lose_anim_end():
 	if lives > 0:
