@@ -1,6 +1,27 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Scenes/MicroGames/Batch2/mgSelfCheckout.gd" type="Script" id=1]
+[ext_resource path="res://Scenes/MicroGames/Batch2/CheckoutDropZone.gd" type="Script" id=2]
+[ext_resource path="res://prefab/mgCleanRoomdraggableObject.tscn" type="PackedScene" id=3]
+[ext_resource path="res://prefab/mgCheckoutdraggableObject.gd" type="Script" id=4]
+[ext_resource path="res://Scenes/MicroGames/Batch2/mgSelfCheckoutScanner.gd" type="Script" id=5]
 
 [node name="mgSelfCheckout" type="Node2D"]
+position = Vector2( 46, 18 )
 script = ExtResource( 1 )
+
+[node name="Item" parent="." groups=["item"] instance=ExtResource( 3 )]
+position = Vector2( -11, 207 )
+script = ExtResource( 4 )
+
+[node name="Item2" parent="." instance=ExtResource( 3 )]
+position = Vector2( -10, 247 )
+script = ExtResource( 4 )
+
+[node name="Scanner" type="Position2D" parent="." groups=["scanner"]]
+position = Vector2( 109, 143 )
+script = ExtResource( 5 )
+
+[node name="zone" type="Position2D" parent="." groups=["zone"]]
+position = Vector2( 241, 246 )
+script = ExtResource( 2 )

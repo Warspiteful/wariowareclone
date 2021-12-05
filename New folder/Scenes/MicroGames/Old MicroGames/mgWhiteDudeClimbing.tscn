@@ -7,7 +7,6 @@
 [ext_resource path="res://GFX/Hud-3.png" type="Texture" id=5]
 [ext_resource path="res://GFX/WhiteDudeClimbing/vulture.png" type="Texture" id=6]
 
-
 [sub_resource type="RectangleShape2D" id=4]
 extents = Vector2( 8, 8 )
 
@@ -115,20 +114,17 @@ frame = 15
 [node name="A" type="Sprite" parent="WhiteDude"]
 position = Vector2( 0, -20 )
 texture = ExtResource( 4 )
-vframes = 2
 hframes = 4
+vframes = 2
 
 [node name="HB" type="Area2D" parent="WhiteDude"]
-editor/display_folded = true
 position = Vector2( 0, -1 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="WhiteDude/HB"]
 position = Vector2( 0, 4 )
 shape = SubResource( 4 )
 
-[node name="VictoryAnim" type="AnimationPlayer" parent="." groups=[
-"mg_anim",
-]]
+[node name="VictoryAnim" type="AnimationPlayer" parent="." groups=["mg_anim"]]
 anims/victory = SubResource( 1 )
 
 [node name="Hud-3" type="Sprite" parent="."]
@@ -137,7 +133,6 @@ scale = Vector2( 1.075, 1 )
 texture = ExtResource( 5 )
 
 [node name="m" type="Node2D" parent="."]
-editor/display_folded = true
 visible = false
 
 [node name="Path2D" type="Path2D" parent="m"]
@@ -156,9 +151,7 @@ texture = ExtResource( 6 )
 flip_h = true
 hframes = 2
 
-[node name="HB" type="Area2D" parent="m/Path2D/PathFollow2D" groups=[
-"anime",
-]]
+[node name="HB" type="Area2D" parent="m/Path2D/PathFollow2D" groups=["anime"]]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="m/Path2D/PathFollow2D/HB"]
 shape = SubResource( 5 )
@@ -183,15 +176,13 @@ texture = ExtResource( 6 )
 flip_h = true
 hframes = 2
 
-[node name="HB" type="Area2D" parent="h/Path2D/PathFollow2D" groups=[
-"anime",
-]]
+[node name="HB" type="Area2D" parent="h/Path2D/PathFollow2D" groups=["anime"]]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="h/Path2D/PathFollow2D/HB"]
 shape = SubResource( 5 )
 
 [node name="PathFollow2D2" type="PathFollow2D" parent="h/Path2D"]
-position = Vector2( 119.515, 82.4038 )
+position = Vector2( 119.515, 82.4039 )
 offset = 94.4309
 v_offset = 48.0
 rotate = false
@@ -205,9 +196,7 @@ texture = ExtResource( 6 )
 flip_h = true
 hframes = 2
 
-[node name="HB" type="Area2D" parent="h/Path2D/PathFollow2D2" groups=[
-"anime",
-]]
+[node name="HB" type="Area2D" parent="h/Path2D/PathFollow2D2" groups=["anime"]]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="h/Path2D/PathFollow2D2/HB"]
 shape = SubResource( 5 )

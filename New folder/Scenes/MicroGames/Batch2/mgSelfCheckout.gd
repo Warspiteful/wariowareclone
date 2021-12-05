@@ -1,16 +1,14 @@
 extends Micro_Game
 
-
-# Declare member variables here. Examples:
-# var a = 2
-# var b = "text"
-
-
-# Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
+	AudioManager.play_music("mario-tenis-exhibition-court.ogg")
 
+func _init():
+	hint_string = "Checkout items!"
+	time = 10
+	
+func _process(delta):
+	if(get_tree().get_nodes_in_group("item") == []):
+		game_cleared()
+		force_microgame_end()
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass

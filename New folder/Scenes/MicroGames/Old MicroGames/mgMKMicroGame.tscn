@@ -427,9 +427,7 @@ anims/Idle = SubResource( 5 )
 anims/PokeThrow = SubResource( 6 )
 anims/Walk = SubResource( 7 )
 
-[node name="MasterPlayer" type="AnimationPlayer" parent="." groups=[
-"mg_anim",
-]]
+[node name="MasterPlayer" type="AnimationPlayer" parent="." groups=["mg_anim"]]
 autoplay = "Begin"
 anims/Begin = SubResource( 8 )
 anims/f1 = SubResource( 9 )

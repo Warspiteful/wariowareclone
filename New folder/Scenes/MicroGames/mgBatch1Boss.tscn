@@ -807,9 +807,7 @@ visible = false
 position = Vector2( 7, -2 )
 shape = SubResource( 3 )
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Toad" groups=[
-"mg_anim",
-]]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Toad" groups=["mg_anim"]]
 autoplay = "d"
 anims/d = SubResource( 4 )
 anims/kids_died = SubResource( 5 )
@@ -833,9 +831,7 @@ anims/m = SubResource( 10 )
 
 [node name="Kids" type="Node" parent="."]
 
-[node name="ToadKid1" type="KinematicBody2D" parent="Kids" groups=[
-"kid",
-]]
+[node name="ToadKid1" type="KinematicBody2D" parent="Kids" groups=["kid"]]
 position = Vector2( 262.764, 141.774 )
 scale = Vector2( 2, 2 )
 collision_layer = 2
@@ -864,18 +860,14 @@ input_pickable = false
 position = Vector2( 0, -1.5 )
 shape = SubResource( 12 )
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Kids/ToadKid1" groups=[
-"mg_anim",
-]]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Kids/ToadKid1" groups=["mg_anim"]]
 autoplay = "d"
 anims/d = SubResource( 13 )
 anims/falling = SubResource( 14 )
 anims/landed = SubResource( 15 )
 anims/pop = SubResource( 16 )
 
-[node name="ToadKid2" type="KinematicBody2D" parent="Kids" groups=[
-"kid",
-]]
+[node name="ToadKid2" type="KinematicBody2D" parent="Kids" groups=["kid"]]
 position = Vector2( 182.269, 65.2365 )
 scale = Vector2( 2, 2 )
 collision_layer = 2
@@ -904,18 +896,14 @@ input_pickable = false
 position = Vector2( 0, -1.5 )
 shape = SubResource( 12 )
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Kids/ToadKid2" groups=[
-"mg_anim",
-]]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Kids/ToadKid2" groups=["mg_anim"]]
 autoplay = "d"
 anims/d = SubResource( 17 )
 anims/falling = SubResource( 18 )
 anims/landed = SubResource( 19 )
 anims/pop = SubResource( 20 )
 
-[node name="ToadKid3" type="KinematicBody2D" parent="Kids" groups=[
-"kid",
-]]
+[node name="ToadKid3" type="KinematicBody2D" parent="Kids" groups=["kid"]]
 position = Vector2( 155.215, 192 )
 scale = Vector2( 2, 2 )
 collision_layer = 2
@@ -944,9 +932,7 @@ input_pickable = false
 position = Vector2( 0, -1.5 )
 shape = SubResource( 12 )
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Kids/ToadKid3" groups=[
-"mg_anim",
-]]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Kids/ToadKid3" groups=["mg_anim"]]
 autoplay = "d"
 anims/d = SubResource( 21 )
 anims/falling = SubResource( 22 )

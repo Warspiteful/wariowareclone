@@ -693,9 +693,7 @@ position = Vector2( 32, 48 )
 position = Vector2( 48, 8 )
 shape = SubResource( 2 )
 
-[node name="Anime" type="KinematicBody2D" parent="." groups=[
-"anime",
-]]
+[node name="Anime" type="KinematicBody2D" parent="." groups=["anime"]]
 position = Vector2( 104, 48 )
 collision_layer = 5
 collision_mask = 5
@@ -707,9 +705,7 @@ flip_h = true
 hframes = 7
 frame = 1
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Anime/Sprite" groups=[
-"mg_anim",
-]]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Anime/Sprite" groups=["mg_anim"]]
 anims/defeat = SubResource( 3 )
 anims/intro = SubResource( 4 )
 anims/victory = SubResource( 5 )
@@ -718,9 +714,7 @@ anims/walk = SubResource( 6 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Anime"]
 shape = SubResource( 7 )
 
-[node name="Player" type="KinematicBody2D" parent="." groups=[
-"player",
-]]
+[node name="Player" type="KinematicBody2D" parent="." groups=["player"]]
 position = Vector2( 56, 48 )
 collision_layer = 3
 collision_mask = 3
@@ -731,9 +725,7 @@ offset = Vector2( 0, -3 )
 hframes = 27
 frame = 2
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Player/Sprite" groups=[
-"mg_anim",
-]]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Player/Sprite" groups=["mg_anim"]]
 anims/attack = SubResource( 8 )
 anims/attack2 = SubResource( 9 )
 anims/block = SubResource( 10 )
@@ -751,9 +743,7 @@ position = Vector2( -999, -12 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player/PHB"]
 shape = SubResource( 16 )
 
-[node name="Master" type="AnimationPlayer" parent="." groups=[
-"mg_anim",
-]]
+[node name="Master" type="AnimationPlayer" parent="." groups=["mg_anim"]]
 anims/end = SubResource( 17 )
 anims/intro = SubResource( 18 )
 
@@ -769,9 +759,7 @@ offset = Vector2( -4, -12 )
 flip_h = true
 hframes = 9
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Maurio/Sprite" groups=[
-"mg_anim",
-]]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Maurio/Sprite" groups=["mg_anim"]]
 anims/attack = SubResource( 19 )
 anims/defeat = SubResource( 20 )
 anims/intro = SubResource( 21 )
@@ -796,9 +784,7 @@ flip_h = true
 hframes = 21
 frame = 16
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="DunkeyKung/Sprite" groups=[
-"mg_anim",
-]]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="DunkeyKung/Sprite" groups=["mg_anim"]]
 anims/defeat = SubResource( 25 )
 anims/intro = SubResource( 26 )
 anims/victory = SubResource( 27 )

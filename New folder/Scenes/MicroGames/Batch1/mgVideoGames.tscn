@@ -311,9 +311,7 @@ position = Vector2( -7.5, 6 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DDDWithHamer/HB"]
 shape = SubResource( 1 )
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="DDDWithHamer" groups=[
-"mg_anim",
-]]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="DDDWithHamer" groups=["mg_anim"]]
 autoplay = "d"
 anims/d = SubResource( 2 )
 anims/ded = SubResource( 3 )
@@ -329,9 +327,7 @@ flip_h = true
 hframes = 8
 script = SubResource( 6 )
 
-[node name="Area2D" type="Area2D" parent="Barrel" groups=[
-"barrel",
-]]
+[node name="Area2D" type="Area2D" parent="Barrel" groups=["barrel"]]
 position = Vector2( 12, -2.5 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Barrel/Area2D"]
@@ -353,9 +349,7 @@ __meta__ = {
 "_edit_group_": true
 }
 
-[node name="Area2D2" type="Area2D" parent="DDDFood" groups=[
-"food",
-]]
+[node name="Area2D2" type="Area2D" parent="DDDFood" groups=["food"]]
 position = Vector2( 8, 0 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DDDFood/Area2D2"]

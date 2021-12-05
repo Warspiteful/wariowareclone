@@ -265,9 +265,7 @@ text = "Remaining :
 "
 align = 1
 
-[node name="target" type="Sprite" parent="." groups=[
-"target",
-]]
+[node name="target" type="Sprite" parent="." groups=["target"]]
 position = Vector2( -96, 176 )
 texture = ExtResource( 4 )
 hframes = 7
@@ -281,9 +279,7 @@ __meta__ = {
 [node name="CollisionShape2D" type="CollisionShape2D" parent="target/Area2D"]
 shape = SubResource( 2 )
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="target" groups=[
-"mg_anim",
-]]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="target" groups=["mg_anim"]]
 autoplay = "d"
 anims/d = SubResource( 3 )
 anims/explode = SubResource( 4 )
@@ -306,9 +302,7 @@ anim_speed_random = 0.3
 anim_offset = 0.2
 anim_offset_random = 0.5
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="." groups=[
-"mg_anim",
-]]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." groups=["mg_anim"]]
 autoplay = "d"
 anims/d = SubResource( 6 )
 anims/reveal = SubResource( 7 )
@@ -322,22 +316,16 @@ __meta__ = {
 "_edit_group_": true
 }
 
-[node name="Area2D" type="Area2D" parent="Pee" groups=[
-"pee",
-]]
+[node name="Area2D" type="Area2D" parent="Pee" groups=["pee"]]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Pee/Area2D"]
 shape = SubResource( 9 )
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Pee" groups=[
-"mg_anim",
-]]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Pee" groups=["mg_anim"]]
 autoplay = "d"
 anims/d = SubResource( 10 )
 
-[node name="StaticBody2D" type="StaticBody2D" parent="." groups=[
-"floor",
-]]
+[node name="StaticBody2D" type="StaticBody2D" parent="." groups=["floor"]]
 position = Vector2( 37, 104 )
 scale = Vector2( 24, 5 )
 __meta__ = {

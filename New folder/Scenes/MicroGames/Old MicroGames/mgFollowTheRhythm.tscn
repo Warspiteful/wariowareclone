@@ -8,8 +8,6 @@
 [ext_resource path="res://GFX/FollowTheRhythm/timing-arrow.png" type="Texture" id=6]
 [ext_resource path="res://GFX/FollowTheRhythm/speaker.png" type="Texture" id=7]
 
-
-
 [sub_resource type="Animation" id=1]
 resource_name = "beat"
 length = 0.4
