@@ -31,7 +31,7 @@ func _input(event):
 			var shortest_dist = 20;
 			for child in rest_nodes:
 				var distance = global_position.distance_to(child.global_position)
-				if distance < shortest_dist:
+				if distance < shortest_dist :
 					child.select()
 					rest_point = child.global_position
 					shortest_dist = distance

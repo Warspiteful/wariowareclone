@@ -147,9 +147,9 @@ func set_game_speed(val):
 	hint.anim_speed = float(200*game_speed);
 	
 func initializeGames():
-	print("NEW GAMES")
+
 	microgame_list = [];
-	print(possible_microgames_list)
+
 	if possible_microgames[lifeIndex].size()>0:
 		for s in possible_microgames[lifeIndex]:
 			microgame_list.append(Global.microgame_list[Global.microgame_ids[s]]);
@@ -175,6 +175,10 @@ func prepare_next():
 				set_game_speed(base_game_speed)
 				master_anim.play("levelup")
 				AudioManager.play_sfx(sfx_speedup,game_speed);
+				if(lifeIndex < 3):
+					lifeIndex += 1
+				initializeGames()
+
 			speedup_counter = 0
 			return
 		elif game_difficulty >= 2:
@@ -184,6 +188,9 @@ func prepare_next():
 			speedup_counter = 0;
 			AudioManager.play_sfx(sfx_speedup,game_speed);
 			master_anim.play("speedup");
+			if(lifeIndex < 3):
+				lifeIndex += 1
+			initializeGames()
 			return
 			
 	if !boss_time:
@@ -194,6 +201,9 @@ func prepare_next():
 			set_game_speed(game_speed+speedup_amount);
 			AudioManager.play_sfx(sfx_speedup,game_speed);
 			master_anim.play("speedup");
+			if(lifeIndex < 3):
+				lifeIndex += 1
+			initializeGames()
 			return
 	
 	if microgame_list.empty():
@@ -219,6 +229,7 @@ func prepare_next():
 		counter_node.set_text(text);
 	completed_micro_game = false;
 	won_micro_game = false;
+
 	micro_game_timer = current_microgame.time;
 		
 #Ends the micro game without waiting for the time to run out
@@ -280,17 +291,15 @@ func on_win_anim_end():
 			if game_difficulty < 2:
 				game_difficulty += 1;
 				master_anim.play("levelup")
+				
 			else:
 				set_game_speed(game_speed+speedup_amount);
 				master_anim.play("speedup")
 				base_game_speed = game_speed;
-			AudioManager.play_sfx(sfx_speedup,game_speed);
+#			AudioManager.play_sfx(sfx_speedup,game_speed);
 			#boss_game_counter -= 1;
 			#speedup_counter -= 1;
 		boss_time = false;
-		if(lifeIndex < 3):
-			lifeIndex += 1
-			initializeGames()
 
 func on_lose_anim_end():
 	if lives > 0:
@@ -363,7 +372,7 @@ func play_microgame_intro_sound():
 	else:
 		sfx_id = sfx_intro2;
 	AudioManager.stop_all()
-	AudioManager.play_sfx(sfx_id,game_speed);
+	AudioManager.play_custom("childmusic.ogg")
 	
 func _notification(what):
 	if what == NOTIFICATION_PREDELETE:
