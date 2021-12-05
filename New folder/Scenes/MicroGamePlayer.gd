@@ -177,7 +177,7 @@ func prepare_next():
 				AudioManager.play_sfx(sfx_speedup,game_speed);
 				if(lifeIndex < 3):
 					lifeIndex += 1
-					initializeGames()
+				initializeGames()
 
 			speedup_counter = 0
 			return
@@ -188,6 +188,9 @@ func prepare_next():
 			speedup_counter = 0;
 			AudioManager.play_sfx(sfx_speedup,game_speed);
 			master_anim.play("speedup");
+			if(lifeIndex < 3):
+				lifeIndex += 1
+			initializeGames()
 			return
 			
 	if !boss_time:
@@ -198,6 +201,9 @@ func prepare_next():
 			set_game_speed(game_speed+speedup_amount);
 			AudioManager.play_sfx(sfx_speedup,game_speed);
 			master_anim.play("speedup");
+			if(lifeIndex < 3):
+				lifeIndex += 1
+			initializeGames()
 			return
 	
 	if microgame_list.empty():
@@ -223,6 +229,7 @@ func prepare_next():
 		counter_node.set_text(text);
 	completed_micro_game = false;
 	won_micro_game = false;
+
 	micro_game_timer = current_microgame.time;
 		
 #Ends the micro game without waiting for the time to run out
