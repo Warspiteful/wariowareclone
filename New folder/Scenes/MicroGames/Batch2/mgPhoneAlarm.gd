@@ -12,4 +12,6 @@ func _ready():
 func _process(delta):
 	if($lock == null):
 		game_cleared()
+		force_microgame_end()
+
 
